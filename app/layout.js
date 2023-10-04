@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
               <Header />
 
               <main>
-                <div className="mx-auto max-w-2xl p-4 md:p-6 2xl:p-10">
+                <div className="mx-auto max-w-screen-lg p-4 md:p-6 2xl:p-10">
                   {children}
                 </div>
               </main>
