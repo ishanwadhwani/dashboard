@@ -8,13 +8,13 @@ const menuItems = [
         id: 1,
         name: 'Dashboard',
         icon: <LuLayoutDashboard size={25} />,
-        link: '/'
+        link: '/dashboard'
     },
     {
         id: 2,
         name: 'Transactions',
         icon: <IoPricetagsOutline size={25} />,
-        link: '/'
+        link: '/transaction'
     },
     {
         id: 3,
