@@ -2,6 +2,8 @@ import GlobalState from "../context/index";
 import "../styles/globals.css";
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
+import NextAuthProvider from "../auth-provider/index";
+
 
 export const metadata = {
   title: "Dashboard",
@@ -12,21 +14,23 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <GlobalState>
-          <div className="flex h-screen overflow-hidden">
-            <Sidebar />
+        <NextAuthProvider>
+          <GlobalState>
+            <div className="flex h-screen overflow-hidden">
+              <Sidebar />
 
-            <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
-              <Header />
+              <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
+                <Header />
 
-              <main>
-                <div className="mx-auto max-w-screen-lg p-4 md:p-6 2xl:p-10">
-                  {children}
-                </div>
-              </main>
+                <main>
+                  <div className="mx-auto max-w-screen-lg p-4 md:p-6 2xl:p-10">
+                    {children}
+                  </div>
+                </main>
+              </div>
             </div>
-          </div>
-        </GlobalState>
+          </GlobalState>
+        </NextAuthProvider>
       </body>
     </html>
   );
